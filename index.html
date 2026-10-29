@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tres ejercicios interactivos de JavaScript inspirados en Alicia en el país de las maravillas.">
+    <title>Alicia en el país de las maravillas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="encabezado" id="inicio">
+        <p class="etiqueta">PROGRAMACIÓN WEB I</p>
+        <h1>Alicia en el país de las maravillas</h1>
+        <p class="subtitulo">
+            Tres aventuras para resolver con lógica y JavaScript
+        </p>
+
+        <nav aria-label="Navegación principal">
+            <a href="#pocion">La poción</a>
+            <a href="#merienda">La merienda</a>
+            <a href="#reina">La Reina</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="introduccion">
+            <h2>¡Comienza la aventura!</h2>
+            <p>
+                Acompaña a Alicia, visita la merienda del Sombrerero
+                y supera el desafío de la Reina de Corazones.
+                Completa los formularios para descubrir cada resultado.
+            </p>
+        </section>
+
+        <!-- EJERCICIO 1 -->
+        <section class="ejercicio" id="pocion">
+            <p class="numero">EJERCICIO 01</p>
+            <h2>La poción mágica de Alicia</h2>
+            <p>
+                Alicia encuentra una botella misteriosa. Calcula su nueva
+                altura para descubrir si puede atravesar la puerta.
+            </p>
+
+            <div class="regla">
+                <strong>Regla matemática:</strong>
+                <p>Altura final = altura inicial + (poción × 10)</p>
+                <p>La puerta mide 150 cm. La poción permitida es de 0 a 20 ml.</p>
+            </div>
+
+            <form id="formPocion">
+                <div class="campo">
+                    <label for="alturaInicial">Altura inicial de Alicia (cm)</label>
+                    <input
+                        type="number"
+                        id="alturaInicial"
+                        name="alturaInicial"
+                        min="0.1"
+                        step="any"
+                        placeholder="Ej. 120"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="cantidadPocion">Cantidad de poción (ml)</label>
+                    <input
+                        type="number"
+                        id="cantidadPocion"
+                        name="cantidadPocion"
+                        min="0"
+                        max="20"
+                        step="any"
+                        placeholder="Ej. 3"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Calcular nueva altura</button>
+            </form>
+
+            <div
+                id="resultadoPocion"
+                class="resultado"
+                aria-live="polite"
+                role="status"
+            >
+                Introduce los datos para comenzar.
+            </div>
+        </section>
+
+        <!-- EJERCICIO 2 -->
+        <section class="ejercicio" id="merienda">
+            <p class="numero">EJERCICIO 02</p>
+            <h2>La merienda del Sombrerero Loco</h2>
+            <p>
+                El Sombrerero recibe invitados para tomar el té.
+                Elige una bebida y calcula cuánto costará la merienda.
+            </p>
+
+            <div class="precios">
+                <h3>Menú de bebidas</h3>
+                <ul>
+                    <li>Té de rosas: Bs 5 por taza.</li>
+                    <li>Café mágico: Bs 8 por taza.</li>
+                    <li>Chocolate encantado: Bs 10 por taza.</li>
+                    <li>Jugo de maravillas: Bs 6 por taza.</li>
+                </ul>
+                <p>
+                    <strong>Promoción:</strong> 10 % de descuento
+                    al comprar 5 tazas o más. Máximo: 20 tazas.
+                </p>
+            </div>
+
+            <form id="formMerienda">
+                <div class="campo">
+                    <label for="nombreInvitado">Nombre del invitado</label>
+                    <input
+                        type="text"
+                        id="nombreInvitado"
+                        name="nombreInvitado"
+                        maxlength="60"
+                        placeholder="Ej. Alicia"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="tipoBebida">Selecciona una bebida</label>
+                    <select id="tipoBebida" name="tipoBebida" required>
+                        <option value="">-- Elige tu bebida --</option>
+                        <option value="te">Té de rosas — Bs 5</option>
+                        <option value="cafe">Café mágico — Bs 8</option>
+                        <option value="chocolate">Chocolate encantado — Bs 10</option>
+                        <option value="jugo">Jugo de maravillas — Bs 6</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="cantidadTazas">Cantidad de tazas</label>
+                    <input
+                        type="number"
+                        id="cantidadTazas"
+                        name="cantidadTazas"
+                        min="1"
+                        max="20"
+                        step="1"
+                        placeholder="Ej. 5"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Calcular cuenta</button>
+            </form>
+
+            <div
+                id="resultadoMerienda"
+                class="resultado"
+                aria-live="polite"
+                role="status"
+            >
+                Completa el formulario para calcular tu cuenta.
+            </div>
+        </section>
+
+        <!-- EJERCICIO 3 -->
+        <section class="ejercicio" id="reina">
+            <p class="numero">EJERCICIO 03</p>
+            <h2>El desafío de la Reina de Corazones</h2>
+            <p>
+                La Reina ordena analizar una secuencia de cartas numeradas.
+                Separa los números pares e impares y compara sus sumas.
+            </p>
+
+            <div class="regla">
+                <strong>Regla matemática:</strong>
+                <p>
+                    Un número es par si el resto de dividirlo entre 2 es 0.
+                    En caso contrario, es impar.
+                </p>
+                <p>Debes ingresar entre 1 y 100 cartas.</p>
+            </div>
+
+            <form id="formReina">
+                <div class="campo">
+                    <label for="cantidadCartas">Cantidad de cartas</label>
+                    <input
+                        type="number"
+                        id="cantidadCartas"
+                        name="cantidadCartas"
+                        min="1"
+                        max="100"
+                        step="1"
+                        placeholder="Ej. 10"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Analizar las cartas</button>
+            </form>
+
+            <div
+                id="resultadoReina"
+                class="resultado"
+                aria-live="polite"
+                role="status"
+            >
+                Introduce la cantidad de cartas para iniciar el desafío.
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p class="frase">«La imaginación abre puertas a nuevas posibilidades»</p>
+        <p>Actividad práctica de Programación Web I</p>
+        <p>Proyecto educativo · HTML5, CSS3 y JavaScript nativo</p>
+        <a href="#inicio">Volver al comienzo ↑</a>
+    </footer>
+</body>
+</html>
