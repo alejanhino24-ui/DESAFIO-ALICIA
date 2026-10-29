@@ -52,7 +52,7 @@ https://alejanhino24-ui.github.io/DESAFIO-ALICIA/
 
 ## 8. Video explicativo
 
-
+https://www.youtube.com/watch?v=MBj3ri_Owxk
 
 ## 9. Autoría
 
