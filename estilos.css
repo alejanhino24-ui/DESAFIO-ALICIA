@@ -1,0 +1,338 @@
+/* ==========================================
+   ALICIA EN EL PAIS DE LAS MARAVILLAS
+   CSS adaptable sin Flexbox ni CSS Grid
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f6f0f8;
+    color: #30243d;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+h2 {
+    color: #573b70;
+}
+
+a {
+    color: #684581;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #d9a82e;
+    outline-offset: 3px;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    padding: 45px 5%;
+    background-color: #352448;
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 6px solid #d9b66f;
+}
+
+.etiqueta {
+    color: #f0d58d;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.encabezado h1 {
+    width: 100%;
+    max-width: 850px;
+    margin: 12px auto;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 3.4rem);
+}
+
+.subtitulo {
+    color: #eee2f3;
+}
+
+/* NAVEGACIÓN */
+
+nav {
+    margin-top: 22px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px 3px;
+    padding: 8px 16px;
+    border: 1px solid #d9b66f;
+    border-radius: 24px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #f0d58d;
+    color: #352448;
+}
+
+/* INTRODUCCIÓN */
+
+.introduccion {
+    width: 90%;
+    max-width: 850px;
+    margin: 32px auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.introduccion h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+}
+
+.introduccion p {
+    color: #5e5266;
+}
+
+/* TARJETAS */
+
+.ejercicio {
+    width: 92%;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 28px;
+    background-color: #ffffff;
+    border: 1px solid #e0d3e7;
+    border-top: 5px solid #9471ad;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(53, 36, 72, 0.08);
+    scroll-margin-top: 15px;
+}
+
+.numero {
+    margin-bottom: 8px;
+    color: #99752c;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.ejercicio h2 {
+    margin-bottom: 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+}
+
+/* REGLAS Y PRECIOS */
+
+.regla,
+.precios {
+    margin: 22px 0;
+    padding: 17px;
+    background-color: #f5eff9;
+    border-left: 4px solid #9471ad;
+    border-radius: 5px;
+}
+
+.regla p,
+.precios p {
+    margin-bottom: 7px;
+}
+
+.precios h3 {
+    color: #573b70;
+}
+
+.precios ul {
+    padding-left: 24px;
+}
+
+/* FORMULARIOS */
+
+.campo {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 7px;
+    color: #3f304d;
+    font-weight: bold;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 46px;
+    padding: 10px;
+    border: 1px solid #c9bad3;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #30243d;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: #887b91;
+}
+
+button {
+    display: inline-block;
+    max-width: 100%;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 7px;
+    background-color: #684581;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4b305f;
+}
+
+/* RESULTADOS ORGANIZADOS CON JAVASCRIPT */
+
+.resultado {
+    width: 100%;
+    margin-top: 23px;
+    padding: 18px;
+    background-color: #faf7fc;
+    border: 1px solid #d8c7e2;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+.resultado:empty {
+    display: none;
+}
+
+.resultado h3 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    color: #573b70;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #dfd1e8;
+}
+
+.resultado-fila {
+    margin: 8px 0;
+    padding: 9px 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.resultado-etiqueta {
+    display: block;
+    color: #675474;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.resultado-valor {
+    display: block;
+    color: #30243d;
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+.resultado-mensaje {
+    margin: 12px 0 0;
+    padding: 12px;
+    background-color: #f1e8f7;
+    border-radius: 6px;
+    color: #4b305f;
+    font-weight: bold;
+}
+
+.resultado.exito {
+    background-color: #edf7ef;
+    border-color: #77a783;
+}
+
+.resultado.exito h3 {
+    color: #245a32;
+}
+
+.resultado.exito .resultado-mensaje {
+    background-color: #dcefe0;
+    color: #245a32;
+}
+
+.resultado.exito .resultado-fila {
+    border-left: 3px solid #77a783;
+}
+
+.resultado.error {
+    background-color: #fff0f0;
+    border-color: #c66b6b;
+}
+
+.resultado.error h3 {
+    color: #8b2525;
+}
+
+.resultado.error .resultado-mensaje {
+    background-color: #ffe0e0;
+    color: #8b2525;
+}
+
+/* PIE DE PÁGINA */
+
+.pie {
+    margin-top: 50px;
+    padding: 35px 5%;
+    background-color: #292033;
+    border-top: 5px solid #d9b66f;
+    color: #eee5f3;
+    text-align: center;
+}
+
+.pie .frase {
+    margin-bottom: 12px;
+    color: #f0d58d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.pie a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #f0d58d;
+    text-decoration: none;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
